@@ -1,0 +1,60 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(home: MyApp()));
+}
+
+class MyApp extends StatefulWidget {
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor : Colors.redAccent,
+      appBar: AppBar(
+         backgroundColor : Colors.grey,
+        title: Text('PUTRI MELLYANI - KELAS 6SIA6 MOBILE2'),
+      ),
+      body: ListView(children: <Widget>[
+        Center(
+            child: Text('DATA MAHASISWA',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
+        DataTable(
+          columns: [
+            DataColumn(label: Text('NIRM')),
+            DataColumn(label: Text('NAMA MAHASISWA')),
+            DataColumn(label: Text('JURUSAN')),
+          ],
+          rows: [
+            DataRow(cells: [
+              DataCell(Text('2018020328')),
+              DataCell(Text('PUTRI MELLYANI')),
+              DataCell(Text('SISTEM INFORMASI')),
+            ]),
+            DataRow(cells: [
+              DataCell(Text('2018020316')),
+              DataCell(Text('YULITA DEVI')),
+              DataCell(Text('SISTEM INFORMASI')),
+            ]),
+            DataRow(cells: [
+              DataCell(Text('2018020734')),
+              DataCell(Text('KHAIRIL ADHA')),
+              DataCell(Text('SISTEM INFORMASI')),
+              ]),
+            DataRow(cells: [
+              DataCell(Text('2018020668')),
+              DataCell(Text('ADEL FINA DIYANI')),
+              DataCell(Text('SISTEM INFORMASI')),
+              ]),
+            DataRow(cells: [
+              DataCell(Text('2018020776')),
+              DataCell(Text('JEKWIN SIMATUPANG')),
+              DataCell(Text('SISTEM INFORMASI')),
+            ]),
+          ],
+        ),
+      ]),
+    );
+  }
+}
